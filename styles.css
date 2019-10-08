@@ -79,6 +79,7 @@ body {
   color: white;
 }
 
+/* index page start */
 .content {
   position: absolute;
   top: 50%;
@@ -138,7 +139,9 @@ body {
 .top-dining-halls {
   text-align: left;
 }
+/* index pages end */
 
+/* Dining pages */
 .dining-content {
   display: flex;
   padding-top: 60px;
@@ -148,7 +151,7 @@ body {
   position: fixed;
   z-index: 1;
   border-right: black groove;
-  height: 85%;
+  height: 82%;
   width: 15%;
   margin: 5px 1px;
   padding: 5px;
@@ -173,14 +176,32 @@ body {
 h2 {
   margin: 0;
 }
-
+.dining-hall-box-img {
+  width: 50%;
+  height: 50%;
+}
 .dining-hall-box-img img {
   padding: 0;
   margin: 0 20px;
-  width: 300px;
-  height: 100px;
+  width: 80%;
+  height: 80%;
 }
 
+.dining-hall-box-info {
+  width: 50%;
+}
+
+.ad {
+  display: flex;
+}
+
+.ad img{
+  padding: 10px;
+  margin: 10px;
+}
+/* dining page end */
+
+/* detail page start */
 .detail-content {
   padding-top: 60px;
 }
@@ -194,7 +215,7 @@ h2 {
 
 .detail-content .dining-hall-info {
   border: black groove;
-  margin: 10px 0;
+  margin: 10px 10px;
 }
 
 .dining-hall-info .title {
@@ -228,27 +249,27 @@ h2 {
 .recent-comments {
   border: black groove;
   height: 60%;
-  margin-bottom: 20px;
-}
-
-.ad {
+  margin: 10px;
+  padding: 10px;
 }
 
 .comment-button {
   margin: 10px 0;
   text-align: right;
 }
+/* Detail page end */
 
+/* review page start */
 .review {
   display: flex;
   border: black groove;
-  margin: 10px 0;
+  margin: 10px 10px;
 }
 
 .review-left {
   padding: 5px;
   border-right: black groove;
-  width: 25%;
+  width: 40%;
 }
 
 .review-left-rating {
@@ -259,19 +280,23 @@ h2 {
 
 .side {
   float: left;
-  width: 15%;
+  width: 20%;
   margin-top: 10px;
 }
 
 .middle {
   float: left;
-  width: 70%;
+  width: 60%;
   margin-top: 10px;
 }
 
 /* Place text to the right */
 .right {
   text-align: right;
+}
+
+.row {
+  padding: 10px;
 }
 
 /* Clear floats after the columns */
@@ -316,18 +341,6 @@ h2 {
   background-color: #f44336;
 }
 
-/* Responsive layout - make the columns stack on top of each other instead of next to each other */
-@media (max-width: 400px) {
-  .side,
-  .middle {
-    width: 100%;
-  }
-  /* Hide the right column on small screens */
-  .right {
-    display: none;
-  }
-}
-
 .review .review-right {
   width: 100%;
 }
@@ -364,11 +377,11 @@ h2 {
 .review-content-image {
   margin: 10px;
 }
-.review-content-detail {
-}
 .review-content-detail-comments {
   width: 100%;
 }
+
+/* review page end */
 
 .footer {
   display: flex;
@@ -429,3 +442,66 @@ h2 {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
+
+
+@media all and (max-width: 768px) {
+  .header {
+  }
+
+  .dining-content {
+    display: block;
+  }
+  .content-left {
+    all: initial;
+    text-align: center;
+  }
+
+  .content-left.list ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .content-middle { 
+    all: initial;
+  }
+
+  .content-right {
+    all: initial;
+  }
+
+  .dining-hall-box-img img {
+    padding: 0;
+    margin: 0 20px;
+    width: 80%;
+    height: 20%;
+  }
+
+  .ad {
+    display: block;
+  }
+
+  .ad img {
+    width: 40%;
+  }
+  .side,
+  .middle {
+    width: 100%;
+  }
+  /* Hide the right column on small screens */
+  .right {
+    display: none;
+  }
+
+  .detail-image {
+    width: 40%;
+  }
+
+  .detail-image img {
+    padding: 0;
+    margin: 0 20px;
+    width: 80%;
+  }
+}
+

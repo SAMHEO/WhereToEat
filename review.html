@@ -53,13 +53,22 @@
           </div>
           <div class="review-content-detail">
             <h2>Your Rating</h2>
-            <p>Star image</p>
+            <div id="star-rating" style="padding: 20px;">
+                <div class="rating-group" style="display: flex;">
+                    <input type="radio" name="rating" value="1"> 1<br>
+                    <input type="radio" name="rating" value="2"> 2<br>
+                    <input type="radio" name="rating" value="3"> 3<br> 
+                    <input type="radio" name="rating" value="4"> 4<br> 
+                    <input type="radio" name="rating" value="5"> 5<br> 
+                </div>
+            </div>
             <div class="review-content-detail-comments">
               <form action="/action_page.php">
                 <textarea
                   rows="4"
                   cols="60"
                   placeholder="Leave your comments"
+                  style="margin: 0px;width: 100%;height: 100px;"
                 ></textarea>
                 <input type="submit" value="Submit" />
               </form>
