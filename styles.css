@@ -1,0 +1,431 @@
+body {
+  background-color: white;
+  margin: 0;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: #a1dad6 groove;
+  background-color: white;
+  padding: 5px;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+
+.header h1 {
+  display: inline;
+}
+
+.header-left {
+  display: flex;
+}
+
+.header-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left .logo a {
+  display: flex;
+  text-decoration: none;
+  color: #d64949;
+}
+
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  margin-right: 5px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.nav li {
+  float: left;
+}
+
+.nav li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav li a:hover {
+  color: #d66767;
+}
+
+.nav .active {
+  color: #d66767;
+}
+
+.button {
+  background-color: #deebe9;
+  border: none;
+  color: black;
+  padding: 10px 11px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 12px;
+}
+
+.button:hover {
+  background-color: #d64949;
+  color: white;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.content-top {
+  text-align: center;
+  font-family: "bookman old style";
+}
+
+.content-bottom {
+  text-align: center;
+  font-family: "bookman old style";
+  font-size: 20px;
+}
+.content ul {
+  list-style-type: none;
+}
+#search-form {
+  background: rgb(214, 73, 73);
+  padding: 10px 15px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  border-radius: 15px;
+}
+
+#search {
+  height: 100%;
+  background: #fff;
+  border-radius: 15px;
+  border: 0;
+  display: block;
+  width: 100%;
+  padding: 10px 32px;
+  font-size: 18px;
+  margin-right: 30px;
+}
+#btn-search {
+  height: 100%;
+  width: 50%;
+  background: #deebe9;
+  white-space: nowrap;
+  border-radius: 15px;
+  font-size: 14px;
+  transition: all 0.2s ease-out, color 0.2s ease-out;
+  border: 0;
+  cursor: pointer;
+}
+.rank {
+  display: flex;
+  justify-content: center;
+}
+
+.top-dining-halls {
+  text-align: left;
+}
+
+.dining-content {
+  display: flex;
+  padding-top: 60px;
+}
+
+.content-left {
+  position: fixed;
+  z-index: 1;
+  border-right: black groove;
+  height: 85%;
+  width: 15%;
+  margin: 5px 1px;
+  padding: 5px;
+  left: 0;
+  overflow-x: hidden;
+}
+
+.content-middle {
+  position: absolute;
+  left: 20%;
+  width: 50%;
+}
+
+.dining-hall-box {
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+  border: black groove;
+  align-items: center;
+}
+
+h2 {
+  margin: 0;
+}
+
+.dining-hall-box-img img {
+  padding: 0;
+  margin: 0 20px;
+  width: 300px;
+  height: 100px;
+}
+
+.detail-content {
+  padding-top: 60px;
+}
+
+.info-content img {
+  padding: 0;
+  margin: 0 20px;
+  width: 300px;
+  height: 100px;
+}
+
+.detail-content .dining-hall-info {
+  border: black groove;
+  margin: 10px 0;
+}
+
+.dining-hall-info .title {
+  margin-left: 10px;
+}
+
+.dining-hall-info .info-content {
+  display: flex;
+  align-items: center;
+}
+
+.dining-hall-info .detail-image {
+  margin: 0 60px;
+}
+
+.dining-hall-info .detail-info {
+  display: block;
+}
+
+.content-right {
+  position: fixed;
+  z-index: 1;
+  height: 85%;
+  width: 25%;
+  margin: 5px;
+  padding: 5px;
+  right: 0;
+  overflow: hidden;
+}
+
+.recent-comments {
+  border: black groove;
+  height: 60%;
+  margin-bottom: 20px;
+}
+
+.ad {
+}
+
+.comment-button {
+  margin: 10px 0;
+  text-align: right;
+}
+
+.review {
+  display: flex;
+  border: black groove;
+  margin: 10px 0;
+}
+
+.review-left {
+  padding: 5px;
+  border-right: black groove;
+  width: 25%;
+}
+
+.review-left-rating {
+  text-align: center;
+  font-size: 18px;
+  font-family: "bookman old style";
+}
+
+.side {
+  float: left;
+  width: 15%;
+  margin-top: 10px;
+}
+
+.middle {
+  float: left;
+  width: 70%;
+  margin-top: 10px;
+}
+
+/* Place text to the right */
+.right {
+  text-align: right;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The bar container */
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+
+/* Individual bars */
+.bar-5 {
+  width: 60%;
+  height: 18px;
+  background-color: #4caf50;
+}
+.bar-4 {
+  width: 30%;
+  height: 18px;
+  background-color: #2196f3;
+}
+.bar-3 {
+  width: 10%;
+  height: 18px;
+  background-color: #00bcd4;
+}
+.bar-2 {
+  width: 4%;
+  height: 18px;
+  background-color: #ff9800;
+}
+.bar-1 {
+  width: 15%;
+  height: 18px;
+  background-color: #f44336;
+}
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+@media (max-width: 400px) {
+  .side,
+  .middle {
+    width: 100%;
+  }
+  /* Hide the right column on small screens */
+  .right {
+    display: none;
+  }
+}
+
+.review .review-right {
+  width: 100%;
+}
+.user-review {
+  display: flex;
+  border-bottom: black groove;
+  align-items: center;
+}
+
+.user-review-image {
+  margin: 20px;
+  padding: 5px;
+}
+
+.review-box {
+  border: black groove;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  height: 50%;
+  width: 60%;
+}
+.review-title {
+  margin: 30px 10px;
+  border-bottom: black groove;
+}
+.review-content {
+  display: flex;
+  margin: 0px 10px;
+  padding: 30px 10px;
+}
+.review-content-image {
+  margin: 10px;
+}
+.review-content-detail {
+}
+.review-content-detail-comments {
+  width: 100%;
+}
+
+.footer {
+  display: flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 3px;
+  align-items: center;
+  justify-content: center;
+  border-top: #a1dad6 groove;
+  background-color: rgb(98, 98, 98);
+}
+
+.footer-copyright p {
+  margin: 0;
+}
+
+.footer-nav {
+  margin-left: 20px;
+  justify-content: space-between;
+}
+
+.footer-copyright {
+  color: white;
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+}
+
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: block; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.95
+  ); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+#text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 30px;
+  color: black;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
