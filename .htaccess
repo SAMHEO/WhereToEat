@@ -1,0 +1,39 @@
+Options -Indexes
+
+RewriteEngine on
+
+
+# Dining Controller
+
+RewriteRule ^dining$ app/controller/DiningController.php?route=dining
+
+RewriteRule ^detail/show/(\S+)$ app/controller/DiningController.php?route=detail&diningName=$1
+
+RewriteRule ^(\S+)/review/$ app/controller/DiningController.php?route=review&diningName=$1
+RewriteRule ^(\S+)/review/submit$ app/controller/DiningController.php?route=addReview&diningName=$1
+
+RewriteRule ^edit/(\S+)/(\d+)$ app/controller/DiningController.php?route=editReview&name=$1&reviewID=$2
+RewriteRule ^edit/(\d+)/process$ app/controller/DiningController.php?route=editReviewProcess&reviewID=$1
+
+#RewriteRule ^detail/delete/(\d+)$ app/controller/DiningController.php?route=deleteReview&reviewID=$1
+RewriteRule ^detail/delete/process$ app/controller/DiningController.php?route=deleteReview
+
+
+# Site controller
+RewriteRule ^index$ app/controller/SiteController.php?route=index
+RewriteRule ^index/readDining$ app/controller/DiningController.php?route=readDining [QSA]
+
+RewriteRule ^signup$ app/controller/SiteController.php?route=signup
+RewriteRule ^signup/process$ app/controller/SiteController.php?route=signupProcess
+
+
+RewriteRule ^changePassword/process$ app/controller/SiteController.php?route=changePasswordProcess
+
+RewriteRule ^login$ app/controller/SiteController.php?route=login
+RewriteRule ^login/process$ app/controller/SiteController.php?route=loginProcess
+RewriteRule ^logout$ app/controller/SiteController.php?route=logout
+
+RewriteRule ^user/([0-9a-zA-Z]{3,40})$ app/controller/SiteController.php?route=profile&username=$1
+
+RewriteRule ^admin$ app/controller/SiteController.php?route=admin
+RewriteRule ^admin/updaterole$ app/controller/SiteController.php?route=update
